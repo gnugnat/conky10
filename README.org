@@ -11,4 +11,4 @@
 * Usage
 ** Autostart
 - add a conkyrc file to autostart, example:
-  =/usr/bin/conky -p 3 -c /home/kh/conky10/conkyrc-gentoo-nvidia=
+  =/usr/bin/conky -p 3 -c /home/[your-user]/conky10/conkyrc-gentoo-nvidia=
