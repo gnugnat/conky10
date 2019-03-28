@@ -1,0 +1,14 @@
+#+STARTUP: showall inlineimages
+#+TITLE: GNU/Gnat's Conky configuration
+#+CREATOR: gnugnat
+#+LANGUAGE: en
+#+ATTR_HTML: :style margin-left: auto; margin-right: auto;
+
+* Howto
+** Installaton
+- git clone the repo
+  =git clone https://github.com/gnugnat/conky10.git=
+* Usage
+** Autostart
+- add a conkyrc file to autostart, example:
+  =/usr/bin/conky -p 3 -c /home/kh/conky10/conkyrc-gentoo-nvidia=

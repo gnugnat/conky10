@@ -1,0 +1,55 @@
+conky.config = {
+
+	update_interval = 5,
+	double_buffer = true,
+	no_buffers = true,
+
+	format_human_readable = true,
+	use_xft = true,
+	font = 'Monospace:size=10',
+	override_utf8_locale = true,
+	text_buffer_size = 2048,
+	
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_hints = 'below,skip_taskbar,skip_pager,sticky',
+
+	own_window_colour = '#000000',
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+
+	alignment = 'top_left',
+	gap_y = 30,
+	gap_x = 30,
+
+	minimum_width = 250,
+	minimum_height = 200,
+	maximum_width = 250,
+
+	default_color = '#93a1a1',
+	color1 = '#7A5ADA',
+	color2 = '#8C8C8C',
+	color3 = '#ABABAB',
+	color4 = '#6c71c4',
+
+};
+
+conky.text = [[
+
+${voffset 10}${color1}${goto 5}${font Liberation Sans:size=82}${time %H}${font Liberation Sans:size=38}${voffset -38}:${time %M}${font Liberation Sans:size=18}${voffset -19}${time %S}
+${color2}${goto 130}${voffset 10}${font :size=11}${time %A}
+${color3}${goto 130}${voffset 1}${font :size=10}${time %d %B %Y}
+
+${color1 }${font xirod:size=12}PORTAGE:${hr 2}$color$font
+Sync:${alignr}${color4}${exec printf '%(%a %b %d %H:%M)T\n' $(grep 'Sync completed' /var/log/emerge.log | sed -n '$ s/:.*//p') }$color
+Status:${alignr}${color4}${execi 30 ~/conky10/emerge-status.sh}$color
+Progress: ${color4}${execibar 30 ~/conky10/emerge-progress.sh}$color
+Pkg:${alignr}${color4}${execi 30 ~/conky10/emerge-current.sh}$color
+World:${alignr}${color4}${exec cat /var/lib/portage/world | wc -l}/${exec ls -d /var/db/pkg/*/* | cut -f5- -d/ | wc -l}$color
+# /var/db/pkg/ is the local repo of installed packages
+
+]];
