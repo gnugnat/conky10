@@ -87,8 +87,6 @@ ${color #93a1a1}World:${alignr}${color #6c71c4}${exec cat /var/lib/portage/world
 ${color #eee8d5}FILESYSTEMS:${color #5b6dad}${hr 2}$color
 ${color #93a1a1}${fs_used /}/${fs_size /} ${color #268bd2}/ ${color #5b6dad}${fs_bar /}$color
 ${color #93a1a1}${fs_used /boot}/${fs_size /boot} ${color #268bd2}b ${color #5b6dad}${fs_bar /boot}
-${color #93a1a1}${fs_used /500DISK/500MUSIC}/${fs_size /500DISK/500MUSIC} ${color #268bd2}m ${color #5b6dad}${fs_bar /500DISK/500MUSIC}$color
-${color #93a1a1}${fs_used /500DISK/500DATA}/${fs_size /500DISK/500DATA} ${color #268bd2}d ${color #5b6dad}${fs_bar /500DISK/500DATA}$color
 
 ${color #eee8d5}GTX:${color #5b6dad}${hr 2}$color
 ${color #93a1a1}GPU Temp: ${alignr}${color #6c71c4}${nvidia temp} C
