@@ -4,6 +4,8 @@
 #+LANGUAGE: en
 #+ATTR_HTML: :style margin-left: auto; margin-right: auto;
 
+* Moved to https://gitlab.com/xgqt/conkies
+
 * Howto
 ** Installaton
 - git clone the repo
